@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "827e5db8-3c3d-4711-b230-3721a911bb9d",
+		"name": "HealthCare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Enrollee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"ramprasad\",\n    \"phoneNumber\": 1111111111,\n    \"activationStatus\": true,\n    \"dateOfBirth\": \"2021-02-24\",\n    \"dependents\": [\n        {\n            \"dateOfBirth\": \"2021-02-24\",\n            \"name\": \"mike\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addenrollees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addenrollees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update enrollees",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"ram\",\n    \"activationStatus\": true,\n    \"dateOfBirth\": \"1989-07-25\",\n    \"phoneNumber\": 8111131111,\n    \"dependents\": [\n        {\n            \"name\": \"prasadeee\",\n            \"dateOfBirth\": \"1989-07-25\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateenrollees/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateenrollees",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update dependents",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"prasadeee\",\n    \"dateOfBirth\": \"1989-07-25\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updatedependents/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updatedependents",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete dependents",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deletedependents/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deletedependents",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add dependents",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"ramprasad\",\n    \"phoneNumber\": 1111111111,\n    \"activationStatus\": true,\n    \"dateOfBirth\": \"2021-02-24\",\n    \"dependents\": [\n        {\n            \"dateOfBirth\": \"2021-02-24\",\n            \"name\": \"mike\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/adddependents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"adddependents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete enrollees",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteenrollees/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteenrollees",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
